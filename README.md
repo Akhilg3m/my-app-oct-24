@@ -1,27 +1,106 @@
-# MyAppOct24
+Angular Project Setup:
+======================
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+1) Install nodejs
 
-## Development server
+    check: node -v
+           npm -v
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2) Install angular
 
-## Code scaffolding
+    npm install -g @angular/cli@15
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    check: ng version
 
-## Build
+3) in vscode start the server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ng serve
 
-## Running unit tests
+    check:  localhost:4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+***) 
+    1) open powershell as administartor
+    2) set-executionPolicy unrestricted
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Project Heirarchy:
+==================
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Directives: useful to alter the DOM
+==========
+
+    1) Structural Direvies:
+
+            *ngFor, *ngIf
+
+
+    2) Attribute Directives:
+
+            ngStyle, ngClass
+
+
+Pipes: Useful to alter the data format.
+======
+
+        | uppercase
+        | lowercase
+        | date
+        | date:'yyyy-MM-dd'
+
+
+API Integration:
+================
+
+0) Create vehilce component and service
+
+1) Import HttpClientModule
+
+2) Inject HttpClient in vehicle service
+   write a get method to hit API
+
+3) API call is an observable so
+   subscribe it in ts to read data
+
+
+ALL POSSIBLE API CALLS:
+=======================
+
+1) all         get           get(URL)
+
+2) specific    get           get(URL/id)
+
+3) filtering   get           get(URL?filter=red)
+
+4) pagination  get           get(URL?limit=10&page=1)
+
+5) sorting     get           get(URL?sortBy=color&order=asc)
+                                                        desc
+
+6) create      post          post(URL,data)
+
+7) update      put           put(URL/id, data)
+
+8) delete      delete        delete(URL/id)
+
+GIT:
+====
+1) Link laptop with github website
+
+    git config --global user.name "XXXXXX"
+    git config --global user.email "XXXXXX"
+
+    Check: git config --list
+
+2) Link project with repository
+
+    git init
+    git remote add origin URL
+
+    Check: git remote -v
+
+3) Sync code
+
+    git add .
+    git commit -m "XXXX"
+    git push

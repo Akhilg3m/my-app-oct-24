@@ -1,0 +1,43 @@
+<p>registration works!</p>
+
+
+<h1>Event Regitration</h1>
+
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="name">
+<button (click)="register()">Register</button>
+
+
+<h1>Registed Users</h1>
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+
+<!-- =========================== -->
+
+<h1>Add Employee</h1>
+
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="empName">
+<br>
+<label for="">Role:</label>
+<input type="text" [(ngModel)]="role">
+<br>
+<button (click)="add()">Add</button>
+
+
+<h1>Registed Users</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.role}}</td>
+        </tr>
+    </tbody>
+</table>
