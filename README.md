@@ -101,6 +101,9 @@ GIT:
 
 3) Sync code
 
-    git add .
-    git commit -m "XXXX"
-    git push
+    git add .                     changes->stagedchanges
+    git commit -m "XXXX"          stanged chagnes -> 0
+    git push                      100%
+
+
+    ***) fist time push suggetion command with -f
