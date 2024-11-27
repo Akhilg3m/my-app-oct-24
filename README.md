@@ -107,3 +107,73 @@ GIT:
 
 
     ***) fist time push suggetion command with -f
+
+
+Forms:
+======
+1) FormGroup           
+2) Nested FormGroup    
+3) Dynamic Forms
+4) FormArray
+5) Validations
+6) Custom Validators
+
+
+
+
+Form Validations:
+
+TS:
+===
+    age: new FormControl('',[Validators.required, Validators.min(18), Validators.max(60)]),
+
+HTML:
+=====
+
+     <div *ngIf="CONTROL?.touched && CONTROL?.invalid">
+
+        <p *ngIf="CONTROL?.errors?.['required']">   xxxxxx  </p>
+        <p *ngIf="CONTROL?.errors?.['min']">        xxxxxx  </p>
+        <p *ngIf="CONTROL?.errors?.['max']">        xxxxxx  </p>
+
+    </div>
+
+    CONTROLS:
+    =========
+    1) FormGroup:         userForm.get('age')
+    2) NestedFormGroup:   userForm.get('address')?.get('pin')
+    3) FormArray:         cardsFormArray.controls[i]?.get('cvv')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
