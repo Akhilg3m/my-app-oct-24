@@ -189,3 +189,36 @@ git push
 go to git hub website
 
     => Raise and merge the pull request
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

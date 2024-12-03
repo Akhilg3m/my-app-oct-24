@@ -11,10 +11,11 @@ import { EmployeeComponent } from './employee/employee.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
-  {path:'dashboard', component:DashboardComponent,children:[
+  {path:'dashboard', canActivate:[AuthenticationGuard], component:DashboardComponent,children:[
     {path:'home', component:HomeComponent},
     {path:'data-binding', component:DataBindingComponent},
     {path:'directives', component:DirectivesComponent},
