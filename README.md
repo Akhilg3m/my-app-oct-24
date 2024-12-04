@@ -63,6 +63,9 @@ API Integration:
    subscribe it in ts to read data
 
 
+
+
+
 ALL POSSIBLE API CALLS:
 =======================
 
@@ -74,14 +77,21 @@ ALL POSSIBLE API CALLS:
 
 4) pagination  get           get(URL?limit=10&page=1)
 
-5) sorting     get           get(URL?sortBy=color&order=asc)
-                                                        desc
+5) sorting     get    get(URL?sortBy=color&order=asc)
+                                                desc
 
 6) create      post          post(URL,data)
 
 7) update      put           put(URL/id, data)
 
 8) delete      delete        delete(URL/id)
+
+
+
+
+
+
+
 
 GIT:
 ====
@@ -146,7 +156,15 @@ HTML:
 
 
 
+Communications:
+===============
 
+    1) component communication
+        -> Parent to child
+        -> Child to parent
+        -> Sibilng
+    2) page communication (view, edit)
+    3) module communication
 
 
 
